@@ -18,8 +18,6 @@ void setup(){
   setupScreen();
 
   pinMode(PIN_REED_SWITCH_NC, INPUT_PULLUP); // set the reed switch's pin's mode
-
-
 }
 
 // put your main code here, to run repeatedly:
@@ -30,15 +28,5 @@ void loop(){
   if(currentTimeInMS - lastScreenUpdate > fiveSecInMS){
     updateScreen();
     lastScreenUpdate = millis();
-  }
-
-  switch (mode){
-    case LOCKDOWN:
-      /* code */
-      break;
-    case UNLOCKED:
-      break;
-    default:
-      break;
   }
 }
